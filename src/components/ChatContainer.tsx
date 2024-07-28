@@ -41,7 +41,7 @@ export default function ChatContainer({ chatHistory }: ChatContainerProps) {
           {message?.role === "user" && (
             <div className="chat chat-end">
               <span className="chat-bubble whitespace-pre-line">
-                {message?.content}
+                <div dangerouslySetInnerHTML={{__html: message?.content}} className="articulo" />
               </span>
             </div>
           )}
@@ -58,7 +58,7 @@ export default function ChatContainer({ chatHistory }: ChatContainerProps) {
             messageIndex !== chatHistory.length - 1 && (
               <div className="chat chat-start">
                 <span className="chat-bubble whitespace-pre-line">
-                  {message?.content}
+                  <div dangerouslySetInnerHTML={{__html: message?.content}} className="articulo" />
                 </span>
               </div>
             )}
