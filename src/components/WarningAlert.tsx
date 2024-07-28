@@ -12,9 +12,7 @@ export default function WarningAlert({ setShowWarning }: WarningAlertProps) {
       <div>
         <WarningSVG />
         <span>
-          If you&apos;re experiencing serious mental health issues, please seek
-          the help of a licensed mental health professional. This app is not
-          intended to replace medical advice or treatment.
+          Asistente concretón es un proyecto desarrollado por el Instituto Mexicano del Concreto A.C.
         </span>
       </div>
       <button

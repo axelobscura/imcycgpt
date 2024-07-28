@@ -11,7 +11,7 @@ export default function ErrorAlert({ setShowError }: ErrorAlertProps) {
     <div className="flex flex-row alert alert-error shadow-lg">
       <div>
         <ErrorSVG />
-        <span>Unable to process request. Please try again later.</span>
+        <span>No podemos procesar tu pedido. Por favor inténtalo mas tarde.</span>
       </div>
       <button
         onClick={() => setShowError(false)}

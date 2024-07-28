@@ -26,14 +26,14 @@ export default function InputControl({
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           type="text"
-          placeholder="Type here"
-          className="input w-full"
+          placeholder="Ingrese su consulta aquí"
+          className="input w-full border-gray-600"
         />
       </div>
       <button
         type="submit"
         disabled={!prompt || loadingResponse}
-        className={`btn btn-ghost ${loadingResponse && "loading"}`}
+        className={`btn btn-ghost border-white ${loadingResponse && "loading"}`}
       >
         {!loadingResponse && <UpRightSVG />}
       </button>
