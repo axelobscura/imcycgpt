@@ -8,8 +8,6 @@ export default async function handler(
 ) {
   const chatHistory = req.body;
 
-  console.log('history: ', chatHistory);
-
   const completion = await openai.createChatCompletion({
     model: "gpt-4",
     messages: [
@@ -23,9 +21,9 @@ export default async function handler(
       },
       {
         role: 'user',
-        content: `Genera un artículo con toda la información relacionada sobre el siguiente tema delimitado por tres hyphens con formato HTML:
+        content: `Genera un artículo con toda la información relacionada sobre el siguiente tema delimitado por tres hyphens:
         ---
-        cemento
+        ${chatHistory[1].content}
         ---
         `,
       },
