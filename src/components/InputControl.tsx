@@ -33,7 +33,10 @@ export default function InputControl({
       <button
         type="submit"
         disabled={!prompt || loadingResponse}
-        className={`btn btn-ghost border-white ${loadingResponse && "loading"}`}
+        className={`btn border-white ${loadingResponse && "loading"}`}
+        style={{
+          backgroundColor: "#0473a5",
+        }}
       >
         {!loadingResponse && <UpRightSVG />}
       </button>
