@@ -11,7 +11,7 @@ export default function WarningAlert({ setShowWarning }: WarningAlertProps) {
     <div className="alert alert-warning shadow-lg">
       <div>
         <WarningSVG />
-        <span>
+        <span className="font-light text-sm">
           Asistente concretón es un proyecto desarrollado por el Instituto Mexicano del Concreto A.C.
         </span>
       </div>
