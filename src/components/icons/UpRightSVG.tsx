@@ -1,8 +1,8 @@
 export default function UpRightSVG() {
   return (
     <svg
-      width="32"
-      height="32"
+      width="27"
+      height="27"
       viewBox="0 0 24 24"
       fill="#ffffff"
       xmlns="http://www.w3.org/2000/svg"
