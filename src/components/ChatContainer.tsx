@@ -1,6 +1,7 @@
 import { ChatCompletionRequestMessage } from "openai";
 import { useEffect, useState } from "react";
 import CursorSVG from "./icons/CursorSVG";
+import Markdown from "react-markdown";
 
 interface ChatContainerProps {
   chatHistory: ChatCompletionRequestMessage[];
@@ -49,7 +50,9 @@ export default function ChatContainer({ chatHistory }: ChatContainerProps) {
             message?.role === "assistant" && (
               <div className="chat chat-start">
                 <span className="chat-bubble whitespace-pre-line">
-                  {displayResponse}
+                  <Markdown>
+                    {displayResponse}
+                  </Markdown>
                   {!completedTyping && <CursorSVG />}
                 </span>
               </div>
