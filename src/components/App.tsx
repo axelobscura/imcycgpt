@@ -54,6 +54,8 @@ export default function App() {
     }
   }, [chatHistory]);
 
+  console.log('chatHistory: ', chatHistory);
+
   useEffect(() => {
     if (chatHistory?.length && promptAdded) {
       handleResponse();

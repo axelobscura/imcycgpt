@@ -14,6 +14,7 @@ export default function InputControl({
   prompt,
   loadingResponse,
 }: InputControlProps) {
+  
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     getResponse();
