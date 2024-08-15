@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
-export default function Banner() {
+export default function Banner({chatHistory}:{chatHistory: any}) {
   return <span className="sm:text-5xl text-3xl pt-4">
     <Image
       src="/concreton.png"
-      width={200}
+      width={chatHistory.length > 1 ? 100 : 350}
       height={45}
       alt="Acervo del cemento y del concreto - Instituto Mexicano del Cemento y del Concreto A.C."
       style={{

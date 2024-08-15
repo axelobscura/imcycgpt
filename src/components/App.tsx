@@ -85,7 +85,9 @@ export default function App() {
 
   return (
     <main className="flex min-h-screen flex-col px-4 sm:px-24 gap-y-4 pb-4">
-      <Banner />
+      <Banner 
+        chatHistory={chatHistory}
+      />
       <div className="grow overflow-y-auto">
         <ChatContainer chatHistory={chatHistory} />
       </div>
