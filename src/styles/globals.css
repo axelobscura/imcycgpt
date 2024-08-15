@@ -46,3 +46,7 @@
   font-weight: bold !important;
   text-decoration: underline;
 }
+
+.loading-spinner {
+  --loading-spinner-color: #ffffff; /* change thecolor to your desired value */
+}
