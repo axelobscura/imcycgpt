@@ -28,7 +28,6 @@ export default function Login({setUser, user}:{setUser: any, user: string}) {
       }
     });
   };
-  console.log("user: ", user);
   return (
     <div className="max-h-screen grid items-center justify-center flex-col sm:text-5xl text-3xl w-full bg-slate-800">
       <Image
