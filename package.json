@@ -13,6 +13,7 @@
     "@types/react": "18.0.33",
     "@types/react-dom": "18.0.11",
     "autoprefixer": "10.4.14",
+    "caniuse-lite": "^1.0.30001695",
     "css.gg": "^2.0.0",
     "daisyui": "^2.51.5",
     "dotenv": "^16.0.3",
