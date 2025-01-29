@@ -1,26 +1,34 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import { useUsuarios } from '../../lib/swr-hooks'
 
-export default function Login({usuarios, setUser, user}:{usuarios: string[], setUser: any, user: string}) {
+export default function Login({setUser, user}:{setUser: any, user: string}) {
+  const {usuarios, isLoading} = useUsuarios();
   const [usernameError, setUsernameError] = useState('');
   const { push } = useRouter();
+  if(isLoading){
+    return(
+        <h1>CARGANDO...</h1>
+    )
+  }
   const loginTest = (event: any) => {
     event.preventDefault();
     const username = (document.getElementById('username') as HTMLInputElement).value;
     const password = (document.getElementById('password') as HTMLInputElement).value;
-    usuarios.map((usuario) => {
+    usuarios.map((usuario : any) => {
       setUsernameError('Cargando');
-      if (username === usuario && password === '12345') {
+      if (username === usuario.email && password === '12345') {
+        setUser(usuario);
         setUsernameError('Bienvenido');
         push('/chat');
       } else {
         setUsernameError('Usuario y/o contraseña incorrectos');
         //alert('Usuario o contraseña incorrectos');
       }
-      
     });
   };
+  console.log("user: ", user);
   return (
     <div className="max-h-screen grid items-center justify-center flex-col sm:text-5xl text-3xl w-full bg-slate-800">
       <Image

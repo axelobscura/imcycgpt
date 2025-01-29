@@ -1,4 +1,3 @@
-import { useUsuarios } from '../../lib/swr-hooks'
 import Login from "@/components/Login";
 import { useState } from "react";
 
@@ -7,14 +6,6 @@ const usuarios = ["hiram.beltran@element5.mx","javier.villegas@element5.mx","joa
 */
 
 export default function Home() {
-  const {usuarios, isLoading} = useUsuarios();
   const [user, setUser] = useState("");
-  if(isLoading){
-    return(
-        <h1>CARGANDO...</h1>
-    )
-  }
-  console.log('usuarios: ', usuarios);
-  
-  return <Login usuarios={usuarios} setUser={setUser} user={user} />;
+  return <Login setUser={setUser} user={user} />;
 }
