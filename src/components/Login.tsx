@@ -12,6 +12,7 @@ export default function Login({setUser, user}:{setUser: any, user: string}) {
         <h1>CARGANDO...</h1>
     )
   }
+  console.log(usuarios);
   const loginTest = (event: any) => {
     event.preventDefault();
     const username = (document.getElementById('username') as HTMLInputElement).value;
